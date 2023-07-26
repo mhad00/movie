@@ -1,0 +1,106 @@
+.detail {
+  width: 100vw;
+  height: 200vh;
+}
+
+.head {
+  display: flex;
+  z-index: 0;
+}
+
+.detail .head .background {
+  width: 100%;
+  height: 500px;
+  z-index: 0;
+  position: absolute;
+}
+
+img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+}
+
+.detail .head .headPart {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 250px;
+  z-index: 10;
+}
+
+.detail .head .headPart .info {
+  width: auto;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  gap: 15px;
+  color: white;
+}
+.detail .head .headPart .btn {
+  width: 100vw;
+  height: 50px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail .head .info .type {
+  width: fit-content;
+  height: 30px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 3px 10px;
+}
+
+.btnRight,
+.btnLeft {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn3,
+.btn4,
+.btn5 {
+  padding: 0 30px;
+  background-color: black;
+  height: 100%;
+  width: fit-content;
+  font-size: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.btn1,
+.btn2 {
+  padding: 0 40px;
+  background-color: rgba(0, 0, 0, 0.17);
+  height: 100%;
+  width: fit-content;
+  font-size: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.btn1 {
+  background-color: rgb(36, 141, 102);
+  color: white;
+}
+.btn5 {
+  width: 120px;
+  padding: 0 18px;
+}
+
+.description {
+  position: relative;
+}
