@@ -1,0 +1,18 @@
+.carousel {
+  margin: 20px auto;
+  width: 100%;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, calc(100% / 4 - 10px));
+  column-gap: 10px;
+}
+.logoCompany {
+  height: 100px;
+  padding: 2px;
+}
+.logoCompany > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

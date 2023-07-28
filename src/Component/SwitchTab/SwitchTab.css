@@ -1,0 +1,42 @@
+.switchingTab {
+  height: 34px;
+  width: 200px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2px;
+  margin-left: 80%;
+}
+.tabItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  position: relative;
+  padding: 2px;
+}
+.tabItem {
+  border-radius: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  color: black;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: color ease 0.3s;
+}
+.active {
+  color: white;
+}
+.movingBg {
+  height: 30px;
+  width: 100px;
+  border-radius: 15px;
+  background: -webkit-linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+  position: absolute;
+  left: 0;
+  transition: left cubic-bezier(0.86, -0.35, 0.567, 1.35) 0.4s;
+}
