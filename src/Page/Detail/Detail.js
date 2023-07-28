@@ -24,7 +24,7 @@ const Detail = () => {
         <div className="headPart">
           <div className="info">
             <p className="type"> 123458 </p>
-            <h1 className="title">Lorem ipsum dolor sit amet1.</h1>
+            <h1 className="title">Lorem ipsum dolor sit amet.</h1>
             <p className="type2">Lorem ipsum dolor sit.</p>
           </div>
           <div className="btn">
