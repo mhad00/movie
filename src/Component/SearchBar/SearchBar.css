@@ -1,0 +1,16 @@
+.searchBar {
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+}
+.searchBar > .noSearch {
+  display: none;
+}
+.search {
+  display: block;
+}
+.searchBar > button {
+  border: none;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+}

@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Page/Home/Home";
@@ -20,7 +19,7 @@ function App() {
           Login
         </Route>
         <Route path="/Detail" element={<Detail />}>
-          <Route path=":id"/>
+          <Route path=":id" />
         </Route>
       </Routes>
     </BrowserRouter>
