@@ -16,8 +16,10 @@ const Detail = () => {
   return (
     <div className="detail">
       <div className="head">
+          <div className="shadow-top"></div>
         <div className="background">
-          <img className="img" src="./phone.png" alt="" />
+          
+          <img className="img" src="./endgame.jpg" alt="" />
         </div>
         <div className="headPart">
           <div className="info">
@@ -56,8 +58,9 @@ const Detail = () => {
             </div>
           </div>
         </div>
+        <div className="shadow-bottom"></div>
       </div>
-      {/* <div className="null"></div> */}
+      {/* Storyline */}
       <div className="description">
         <div className="storyLine">Story Line</div>
         <div className="overview">
@@ -66,9 +69,23 @@ const Detail = () => {
           reiciendis voluptate sint quas omnis mollitia non voluptatem, sapiente
           earum. Dolore vero sapiente praesentium est, excepturi iste ut
           blanditiis deleniti dolores fugit tempora quasi eaque minima optio
-          tempore dolorem reprehenderit autem omnis!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quidem, at rerum quaerat magnam praesentium odit voluptas ipsa quo aperiam? Eaque, accusantium. Ipsa, harum quisquam omnis, accusamus modi ut quibusdam officiis velit optio error voluptas cum, corrupti repellendus ab iure eum commodi obcaecati cumque cupiditate? Saepe neque, praesentium ratione qui iusto totam nostrum sapiente atque beatae debitis, nesciunt quas minima, eius fugit sint ipsum consequatur provident recusandae. Nulla temporibus voluptatibus impedit libero voluptates eum omnis enim et labore distinctio nam reiciendis quo animi, sequi consequatur dolor illo tenetur. Eligendi, a facilis illo nihil reiciendis est? Accusantium, rerum. Vel, voluptas? Error?
+          tempore dolorem reprehenderit autem omnis! Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Eos quidem, at rerum quaerat magnam
+          praesentium odit voluptas ipsa quo aperiam? Eaque, accusantium. Ipsa,
+          harum quisquam omnis, accusamus modi ut quibusdam officiis velit optio
+          error voluptas cum, corrupti repellendus ab iure eum commodi obcaecati
+          cumque cupiditate? Saepe neque, praesentium ratione qui iusto totam
+          nostrum sapiente atque beatae debitis, nesciunt quas minima, eius
+          fugit sint ipsum consequatur provident recusandae. Nulla temporibus
+          voluptatibus impedit libero voluptates eum omnis enim et labore
+          distinctio nam reiciendis quo animi, sequi consequatur dolor illo
+          tenetur. Eligendi, a facilis illo nihil reiciendis est? Accusantium,
+          rerum. Vel, voluptas? Error?
         </div>
+      </div>
+      <div className="topCast">
+        Top Cast
+        <div className="cast"></div>
       </div>
     </div>
   );

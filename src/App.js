@@ -20,7 +20,7 @@ function App() {
           Login
         </Route>
         <Route path="/Detail" element={<Detail />}>
-          Detail
+          <Route path=":id"/>
         </Route>
       </Routes>
     </BrowserRouter>
