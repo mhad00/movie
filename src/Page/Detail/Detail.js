@@ -8,6 +8,7 @@ import {
   FaShareAlt,
 } from "react-icons/fa";
 import Cast from "./Cast/Cast";
+
 const Detail = () => {
   const [like, setLike] = useState(false);
 
@@ -61,7 +62,7 @@ const Detail = () => {
         <div className="shadow-bottom"></div>
       </div>
       {/* Storyline */}
-      <div className="description">
+      <div className="description-detail">
         <div className="storyLine">Story Line</div>
         <div className="overview">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod maxime

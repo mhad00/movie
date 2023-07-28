@@ -3,7 +3,7 @@ import "./Cast.css";
 const Cast = () => {
   return (
       <div className="castDetail">
-        <div className="img">
+        <div className="charImg">
           <img src="./fight.jpg" alt="" />
         </div>
         <div className="actor">
