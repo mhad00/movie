@@ -7,6 +7,7 @@ import {
   FaArrowDown,
   FaShareAlt,
 } from "react-icons/fa";
+import Cast from "./Cast/Cast";
 const Detail = () => {
   const [like, setLike] = useState(false);
 
@@ -16,10 +17,9 @@ const Detail = () => {
   return (
     <div className="detail">
       <div className="head">
-          <div className="shadow-top"></div>
+        <div className="shadow-top"></div>
         <div className="background">
-          
-          <img className="img" src="./endgame.jpg" alt="" />
+          <img className="img" src="./avenger.jpg" alt="" />
         </div>
         <div className="headPart">
           <div className="info">
@@ -84,8 +84,8 @@ const Detail = () => {
         </div>
       </div>
       <div className="topCast">
-        Top Cast
-        <div className="cast"></div>
+        <h3>Top Cast</h3>
+        <Cast />
       </div>
     </div>
   );
