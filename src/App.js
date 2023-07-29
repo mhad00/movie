@@ -12,13 +12,13 @@ function App() {
         <Route path="/" element={<Home />}>
           Home
         </Route>
-        <Route path="/Category" element={<Category />}>
+        <Route path="/category" element={<Category />}>
           Category
         </Route>
-        <Route path="/Login" element={<Login />}>
+        <Route path="/login" element={<Login />}>
           Login
         </Route>
-        <Route path="/Detail" element={<Detail />}>
+        <Route path="/detail" element={<Detail />}>
           <Route path=":id" />
         </Route>
       </Routes>
