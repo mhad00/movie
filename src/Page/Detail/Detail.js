@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import Cast from "./Cast/Cast";
 
-const Detail = () => {
+const Detail = ({addMovie}) => {
   const [like, setLike] = useState(false);
 
   const onLikeHandle = () => {
@@ -34,7 +34,7 @@ const Detail = () => {
                 <FaPlay size="20px" />
                 Play Now
               </button>
-              <button className="btn2">
+              <button className="btn2" onClick={() => {addMovie()}}>
                 <FaBookmark size="20px" />
                 Add Watchlist
               </button>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Cast.css";
-import {Link, link} from "react-router-dom"
+import {Link} from "react-router-dom"
 const Cast = () => {
   return (
       <Link to="/" className="castDetail">

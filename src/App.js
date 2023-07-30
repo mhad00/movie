@@ -4,8 +4,17 @@ import Home from "./Page/Home/Home";
 import Category from "./Component/Category/Category";
 import Login from "./Page/Login/Login";
 import Detail from "./Page/Detail/Detail";
+import { useState } from "react";
 
 function App() {
+  const [watchlist, setWatchList] = useState([]);
+  const addMovie = (movie) => {
+    const newMovie = {
+      ...movie,
+    };
+    setWatchList([...watchlist, newMovie]);
+  };
+
   return (
     <BrowserRouter>
       <Routes>
@@ -18,7 +27,7 @@ function App() {
         <Route path="/login" element={<Login />}>
           Login
         </Route>
-        <Route path="/detail" element={<Detail />}>
+        <Route path="/detail" element={<Detail addmovie={addMovie} />}>
           <Route path=":id" />
         </Route>
       </Routes>
