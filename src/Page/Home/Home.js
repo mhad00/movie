@@ -5,7 +5,8 @@ import { Outlet } from "react-router-dom";
 import SwitchTab from "../../Component/SwitchTab/SwitchTab";
 import UseFetchApi from "../../Hook/UseFetchApi/UseFetchApi";
 import CarouselMovie from "../../Component/CarouselMovie/CarouselMovie";
-
+import FooterProject from "../../Component/Footer/Footer";
+import ScrollButton from "../../Component/Scroll/ScrollButton";
 const Home = () => {
   const [endpoint, setEndpoint] = useState("day");
   const { movieTrending } = UseFetchApi(endpoint);
@@ -13,7 +14,7 @@ const Home = () => {
     setEndpoint(tab === "Day" ? "day" : "week");
   };
   return (
-    <div className="detail"> 
+    <div className="detail">
       <Header />
       <Carousel />
       <div className="movieList">
@@ -22,6 +23,9 @@ const Home = () => {
         <CarouselMovie movieTrending={movieTrending} />
       </div>
       <Outlet />
+      <hr />
+      <FooterProject />
+      <ScrollButton />
     </div>
   );
 };
