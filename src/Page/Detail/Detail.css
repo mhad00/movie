@@ -6,7 +6,7 @@
 }
 
 .head {
-  position: relative;
+  /* position: relative; */
 }
 /* hr{
 
@@ -128,6 +128,17 @@
   margin: 0 50px;
   color: white;
   position: relative;
+}
+.overview{
+  margin-top: 20px ;
+}
+
+.readMore {
+  width: fit-content;
+  margin-top: 10px;
+  text-decoration: underline;
+  font-style: italic;
+  cursor: pointer;
 }
 
 /* Cast */
