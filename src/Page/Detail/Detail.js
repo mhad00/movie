@@ -9,7 +9,8 @@ import {
 } from "react-icons/fa";
 import Cast from "./Cast/Cast";
 
-const Detail = ({addMovie}) => {
+const Detail = (props) => {
+  const {addMovie} = props
   const [like, setLike] = useState(false);
 
   const onLikeHandle = () => {

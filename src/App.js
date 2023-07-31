@@ -8,7 +8,7 @@ import { useState } from "react";
 
 function App() {
   const [watchlist, setWatchList] = useState([]);
-  const addMovie = (movie) => {
+  const onAddMovie = (movie) => {
     const newMovie = {
       ...movie,
     };
@@ -27,7 +27,7 @@ function App() {
         <Route path="/login" element={<Login />}>
           Login
         </Route>
-        <Route path="/detail" element={<Detail addmovie={addMovie} />}>
+        <Route path="/detail" element={<Detail addMovie={onAddMovie} />}>
           <Route path=":id" />
         </Route>
       </Routes>
