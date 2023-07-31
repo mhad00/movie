@@ -60,6 +60,9 @@
  display: flex;
  /* padding-left: 20px; */
 }
+.history h1:hover{
+    color: #ff6022;
+}
 .history h1{
     color: hsla(0,0%,100%,.5);
     font-size: 16px;
@@ -71,6 +74,9 @@
     margin-right: 20px;
     color: hsla(0,0%,100%,.5);
 }
+.icon-hs:hover{
+    color: #ff6022;
+}
 .user-optinal{
     width: 262px;
  height: 77px;
@@ -78,6 +84,9 @@
  margin-left: 20px;
  line-height: 77px;
  display: flex;
+}
+.user-optinal h1:hover{
+    color: #ff6022;
 }
 .user-optinal h1{
     color: hsla(0,0%,100%,.5);
@@ -89,6 +98,9 @@
     margin-top: 28px;
     margin-right: 20px;
     color: hsla(0,0%,100%,.5);
+}
+.user-icon-pr:hover{
+    color: #ff6022;
 }
 .logout{
     width: 262px;
@@ -104,10 +116,16 @@
     font-style: normal;
     font-weight: 700;
 }
+.logout h1:hover{
+    color: #ff6022;
+}
 .logout-icon{
     margin-top: 28px;
     margin-right: 20px;
     color: hsla(0,0%,100%,.5);
+}
+.logout-icon:hover{
+    color: #ff6022;
 }
 .container-Profile{
     display: flex;
