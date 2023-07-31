@@ -77,7 +77,7 @@ const Detail = ({addMovie}) => {
           error voluptas cum, corrupti repellendus ab iure eum commodi obcaecati
           cumque cupiditate? Saepe neque, praesentium ratione qui iusto totam
           nostrum sapiente atque beatae debitis, nesciunt quas minima, eius
-          fugit sint ipsum consequatur provident recusandae. Nulla temporibus
+          fugit sint ipsum consequaatur provident recusandae. Nulla temporibus
           voluptatibus impedit libero voluptates eum omnis enim et labore
           distinctio nam reiciendis quo animi, sequi consequatur dolor illo
           tenetur. Eligendi, a facilis illo nihil reiciendis est? Accusantium,
