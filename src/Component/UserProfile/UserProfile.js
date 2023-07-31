@@ -1,10 +1,15 @@
 import React from "react";
 import { BiLogOut, BiUser, BiHistory } from "react-icons/bi";
 import "./UserProfile.css";
-
+import { Link } from "react-router-dom";
 const UserProfile = () => {
   return (
     <div className="fullwh">
+      <Link to="/">
+        <div className="out">
+          <BiLogOut size={40} />
+        </div>
+      </Link>
       <div className="container-Profile">
         <div className="nav-pr">
           <div className="avt-name">
