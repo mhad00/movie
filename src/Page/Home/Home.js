@@ -7,6 +7,7 @@ import UseFetchApi from "../../Hook/UseFetchApi/UseFetchApi";
 import CarouselMovie from "../../Component/CarouselMovie/CarouselMovie";
 import FooterProject from "../../Component/Footer/Footer";
 import ScrollButton from "../../Component/Scroll/ScrollButton";
+import UserProfile from "../../Component/UserProfile/UserProfile";
 const Home = () => {
   const [endpoint, setEndpoint] = useState("day");
   const { movieTrending } = UseFetchApi(endpoint);
