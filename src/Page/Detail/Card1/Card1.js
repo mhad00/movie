@@ -6,7 +6,7 @@ const Card1 = (props) => {
   const { name, img, type,story, setDefaultData } = props;
   return (
     <div className="card1" onClick={()=>{
-        setDefaultData({name,story})
+        setDefaultData({name,story,type})
     }}>
       <div className="card1Img">
         <img src={img} alt="" />

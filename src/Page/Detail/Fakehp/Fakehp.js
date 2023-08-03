@@ -19,7 +19,7 @@ const Fakehp = () => {
             <img src="" alt="" />
           </div>
           <div className="wlMovieInfo1">{defaultData.name}</div>
-          <div className="wlMovieInfo2">2222</div>
+          <div className="wlMovieInfo2">{defaultData.type}</div>
           <hr />
           <div className="wlMovieOverview">
             <p>{defaultData.story}</p>

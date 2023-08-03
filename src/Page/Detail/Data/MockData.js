@@ -24,7 +24,7 @@ export const MockData = [
     adult: true,
     id: 3,
     img: "fight.jpg",
-    type: "Movie",
+    type: "Series",
     story:
       "5125125151ftwu etgiowhihawinhgvtiawg nawhwagawegohwa oeiwh ion vwioe fiowetio avnwoietn weot noiuaweo ừoeif",
     date: "20/10/2010",
