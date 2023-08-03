@@ -10,7 +10,8 @@ import {
 import Cast from "./Cast/Cast";
 import ReadMore from "./ReadMore/ReadMore";
 
-const Detail = () => {
+const Detail = (props) => {
+  const {addMovie} = props
   const [like, setLike] = useState(false);
 
   const onLikeHandle = () => {
@@ -52,7 +53,7 @@ const Detail = () => {
                 <FaPlay size="20px" />
                 Play Now
               </button>
-              <button className="btn2">
+              <button className="btn2" onClick={() => {addMovie()}}>
                 <FaBookmark size="20px" />
                 Add Watchlist
               </button>
@@ -81,7 +82,7 @@ const Detail = () => {
       </div>
       {/* Storyline */}
       <div className="description-detail">
-        <div className="storyLine">Story Line</div>
+        <div className="storyLine"><h3>Story Line</h3></div>
         <div className="overview">
           <ReadMore children={lorem} maxLength={500} />
         </div>

@@ -23,7 +23,9 @@
   
 }
 
-.actor h2, .actor p{
+.actor h2, .actor h3{
   margin: 10px;
+  /* text-decoration: none; */
+  color: white;
 }
 
