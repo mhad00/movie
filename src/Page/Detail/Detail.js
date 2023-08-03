@@ -19,7 +19,7 @@ const Detail = (props) => {
   };
   const lorem = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod maxime
   nam explicabo est, alias exercitationem laboriosam assumenda deleniti
-  reiciendis voluptate sint quas omnis mollitia non voluptatem, sapiente
+  reiciendis voluptate sint quas omnis mollitia non voluptatema, sapiente
   earum. Dolore vero sapiente praesentium est, excepturi iste ut
   blanditiis deleniti dolores fugit tempora quasi eaque minima optio
   tempore dolorem reprehenderit autem omnis! Lorem ipsum dolor sit amet
