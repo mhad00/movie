@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Readmore = ({ p, max }) => {
+const ReadMore = ({ p, max }) => {
   const [readMore, setReadMore] = useState(true);
 
   const toggleReadMore = () => {
@@ -19,4 +19,4 @@ const Readmore = ({ p, max }) => {
   );
 };
 
-export default Readmore;
+export default ReadMore;
