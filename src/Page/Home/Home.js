@@ -8,6 +8,9 @@ import CarouselMovie from "../../Component/CarouselMovie/CarouselMovie";
 import UseFetchMovieCarousel from "../../Hook/UseFetchMovieCarousel/UseFetchMovieCarousel";
 import UseFetchMoviePublic from "../../Hook/UseFetchMoviePublic/UseFetchMoviePublic";
 
+import FooterProject from "../../Component/Footer/Footer";
+import ScrollButton from "../../Component/Scroll/ScrollButton";
+import UserProfile from "../../Component/UserProfile/UserProfile";
 const Home = () => {
   const [endpoint, setEndpoint] = useState("day");
   const { movieTrending, loadingTrending } = UseFetchMovieCarousel(endpoint);
@@ -50,6 +53,9 @@ const Home = () => {
         <CarouselMovie movie={movieUpComing} loading={loadingUpComing} />
       </div>
       <Outlet />
+      <hr />
+      <FooterProject />
+      <ScrollButton />
     </div>
   );
 };
