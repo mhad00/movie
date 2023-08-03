@@ -4,6 +4,7 @@ import Home from "./Page/Home/Home";
 import Category from "./Component/Category/Category";
 import Login from "./Page/Login/Login";
 import Detail from "./Page/Detail/Detail";
+import Fakehp from "./Page/Detail/Fakehp/Fakehp";
 import { useState } from "react";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <div style={{width:"auto", height:"100px", backgroundColor:"pink"}}></div>
       <Routes>
         <Route path="/" element={<Home />}>
           Home
@@ -27,10 +29,11 @@ function App() {
         <Route path="/login" element={<Login />}>
           Login
         </Route>
-        <Route path="/detail" element={<Detail addMovie={onAddMovie} />}>
+        <Route path="/fakehp" element={<Fakehp addMovie={onAddMovie} />}>
           <Route path=":id" />
         </Route>
       </Routes>
+      <div style={{width:"auto", height:"300px", backgroundColor:"pink"}}></div>
     </BrowserRouter>
   );
 }

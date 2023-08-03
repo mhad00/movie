@@ -1,0 +1,35 @@
+.card1 {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.card1Img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.card1Img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card1Detail {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  color: white;
+}
+
+.card1Shadow-bottom {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+}
