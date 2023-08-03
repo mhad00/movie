@@ -8,9 +8,9 @@ import {
   FaShareAlt,
 } from "react-icons/fa";
 import Cast from "./Cast/Cast";
-import ReadMore from "./ReadMore/ReadMore";
 
-const Detail = () => {
+const Detail = (props) => {
+  const {addMovie} = props
   const [like, setLike] = useState(false);
 
   const onLikeHandle = () => {
@@ -52,7 +52,7 @@ const Detail = () => {
                 <FaPlay size="20px" />
                 Play Now
               </button>
-              <button className="btn2">
+              <button className="btn2" onClick={() => {addMovie()}}>
                 <FaBookmark size="20px" />
                 Add Watchlist
               </button>
@@ -81,9 +81,25 @@ const Detail = () => {
       </div>
       {/* Storyline */}
       <div className="description-detail">
-        <div className="storyLine">Story Line</div>
+        <div className="storyLine"><h3>Story Line</h3></div>
         <div className="overview">
-          <ReadMore children={lorem} maxLength={500} />
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod maxime
+          nam explicabo est, alias exercitationem laboriosam assumenda deleniti
+          reiciendis voluptate sint quas omnis mollitia non voluptatem, sapiente
+          earum. Dolore vero sapiente praesentium est, excepturi iste ut
+          blanditiis deleniti dolores fugit tempora quasi eaque minima optio
+          tempore dolorem reprehenderit autem omnis! Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Eos quidem, at rerum quaerat magnam
+          praesentium odit voluptas ipsa quo aperiam? Eaque, accusantium. Ipsa,
+          harum quisquam omnis, accusamus modi ut quibusdam officiis velit optio
+          error voluptas cum, corrupti repellendus ab iure eum commodi obcaecati
+          cumque cupiditate? Saepe neque, praesentium ratione qui iusto totam
+          nostrum sapiente atque beatae debitis, nesciunt quas minima, eius
+          fugit sint ipsum consequatur provident recusandae. Nulla temporibus
+          voluptatibus impedit libero voluptates eum omnis enim et labore
+          distinctio nam reiciendis quo animi, sequi consequatur dolor illo
+          tenetur. Eligendi, a facilis illo nihil reiciendis est? Accusantium,
+          rerum. Vel, voluptas? Error?
         </div>
       </div>
       <div className="topCast">
