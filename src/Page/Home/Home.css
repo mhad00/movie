@@ -1,0 +1,14 @@
+.movieList {
+  margin-top: 100px;
+}
+.movieList > .nameLabel {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.movieList > span {
+  padding-left: 20px;
+  font-size: 40px;
+}
