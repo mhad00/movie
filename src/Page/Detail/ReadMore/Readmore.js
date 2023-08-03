@@ -1,33 +1,22 @@
 import React, { useState } from "react";
 
-function ReadMore({ children, maxLength }) {
-  const [isTruncated, setIsTruncated] = useState(true);
+const Readmore = ({ p, max }) => {
+  const [readMore, setReadMore] = useState(true);
 
-  const toggleTruncate = () => {
-    setIsTruncated(!isTruncated);
+  const toggleReadMore = () => {
+    setReadMore(!readMore);
   };
 
-  if (children.length <= maxLength) {
-    return <p>{children}</p>;
+  if (p.length <= max) {
+    return <p>{p}</p>;
   }
 
   return (
     <div>
-      <p>{isTruncated ? `${children.slice(0, maxLength)}...` : children}</p>
-      <p
-        style={{
-          fontStyle: "italic",
-          textDecoration: "underline",
-          margin: "20px 0 0 0",
-          cursor:"pointer",
-          width:"fit-content"
-        }}
-        onClick={toggleTruncate}
-      >
-        {isTruncated ? "Show More" : "Show Less"}
-      </p>
+      <h4>{readMore ? `${p.slice(0, max)}...` : p}</h4>
+      <h4 className="readMore" onClick={toggleReadMore}>{readMore ? `Show More` : `Show Less`}</h4>
     </div>
   );
-}
+};
 
-export default ReadMore;
+export default Readmore;
