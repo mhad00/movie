@@ -7,6 +7,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const Header = () => {
   const { data, loading, linkPath, error, description } = UseFetchApi();
+  console.log("data", data);
   const bg = `${linkPath?.images?.base_url}${linkPath?.images?.backdrop_sizes[3]}${data?.backdrop_path}`;
   const date = new Date(data.release_date);
   const dateElm = date.toDateString();
@@ -14,33 +15,6 @@ const Header = () => {
     <div className="Header">
       <img src={bg} alt="" />
       <div className="opacity-layer"></div>
-      <div className="heroSearch">
-        <div>
-          <Link
-            to="/"
-            style={{
-              display: "flex",
-            }}
-          >
-            <img src="" alt="" />
-            <p
-              style={{
-                fontSize: "40px",
-                fontWeight: "bold",
-              }}
-            >
-              MovieMaster
-            </p>
-          </Link>
-        </div>
-        <NavlinkPage />
-        <div className="searchRight">
-          <SearchBar />
-          <Link to="/Login">
-            <span>Login</span>
-          </Link>
-        </div>
-      </div>
       <div className="description">
         <h2>{data.original_title}</h2>
         <h5>{dateElm}</h5>
@@ -68,6 +42,33 @@ const Header = () => {
         >
           Add Watchlist
         </button>
+      </div>
+      <div className="heroSearch">
+        <div>
+          <Link
+            to="/"
+            style={{
+              display: "flex",
+            }}
+          >
+            <img src="" alt="" />
+            <p
+              style={{
+                fontSize: "40px",
+                fontWeight: "bold",
+              }}
+            >
+              MovieMaster
+            </p>
+          </Link>
+        </div>
+        <NavlinkPage />
+        <div className="searchRight">
+          <SearchBar />
+          <Link to="/Login">
+            <span>Login</span>
+          </Link>
+        </div>
       </div>
     </div>
   );

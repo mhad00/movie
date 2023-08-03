@@ -1,19 +1,25 @@
 import React, { useState } from "react";
-const url = `https://api.themoviedb.org/3/movie/${
-  Math.floor(Math.random() * 100) * Math.floor(Math.random() * 100)
-}?api_key=92ad04cfd3d58b260eba69def4b861b4`;
+const urlPoster = (url) => {
+  return `https://api.themoviedb.org/3/movie/${url}?api_key=92ad04cfd3d58b260eba69def4b861b4`;
+};
 const urlMovieBuild = (endpoint) => {
   return `https://api.themoviedb.org/3/trending/movie/${endpoint}?api_key=92ad04cfd3d58b260eba69def4b861b4`;
 };
+const urlMovie = (url) => {
+  return `https://api.themoviedb.org/3/movie/${url}?api_key=92ad04cfd3d58b260eba69def4b861b4`;
+};
 const ApiService = {
-  getJson: async () => {
-    console.log(url);
-    return await fetch(url).then((res) => res.json());
-  },
-  getMovie: (movieType) => {
-    const url = urlMovieBuild(movieType);
-    console.log(url);
+  getJson: (number) => {
+    const url = urlPoster(number);
     return fetch(url).then((res) => res.json());
+  },
+  getMovie: (endpoint) => {
+    const url = urlMovieBuild(endpoint);
+    return fetch(url).then((res) => res.json());
+  },
+  getMoviePublic: (url) => {
+    const urlMovies = urlMovie(url);
+    return fetch(urlMovies).then((res) => res.json());
   },
 };
 
