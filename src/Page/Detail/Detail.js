@@ -8,7 +8,7 @@ import {
   FaShareAlt,
 } from "react-icons/fa";
 import Cast from "./Cast/Cast";
-import ReadMore from "./ReadMore";
+import Readmore from "./ReadMore";
 
 const Detail = (props) => {
   const {addMovie} = props
@@ -84,7 +84,7 @@ const Detail = (props) => {
       <div className="description-detail">
         <div className="storyLine"><h3>Story Line</h3></div>
         <div className="overview">
-          <ReadMore children={lorem} maxLength={500} />
+          <Readmore children={lorem} maxLength={500} />
         </div>
       </div>
       <div className="topCast">
