@@ -8,7 +8,7 @@ import {
   FaShareAlt,
 } from "react-icons/fa";
 import Cast from "./Cast/Cast";
-import ReadMore from "./ReadMore/ReadMore";
+import ReadMore from "./ReadMore";
 
 const Detail = (props) => {
   const {addMovie} = props
