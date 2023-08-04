@@ -1,0 +1,108 @@
+*{
+    padding:0;
+    margin:0;
+    
+    /* font-family: 'Arial (sans-serif)'; */
+}
+.fullwh-footer{
+    background-color: black;
+}
+.container-linh{
+    padding-top: 40px;
+    width: 1440px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    background-color:black;
+}
+h1{
+    font-size: 40px;
+    color: white;
+}
+.support-linh{
+    text-align: start;
+}
+.support-linh ul{
+    display: flex;
+}
+.support-linh ul a{
+    list-style: none;
+    text-decoration: none;
+}
+.support-linh ul a li{
+    font-size: 14px;
+    color: black;
+    padding:10px 20px 0 0;
+    color: aliceblue;
+
+}
+.support-linh ul a li:hover{
+    color:#ce700c;
+}
+
+.right-element-linh{
+    padding-left: 600px;
+}
+.navigation-linh{
+    text-align: end;
+}
+.navigation-linh ul{
+    display: flex;
+}
+.navigation-linh ul a{
+    list-style: none;
+    text-decoration: none;
+}
+.navigation-linh ul a li{
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+}
+.navigation-linh ul a li:hover{
+    color:white;
+    border:1px solid #ce700c;
+    background-color: #ce700c;
+    /* padding:10px 20px; */
+    width: auto;
+    /* height: 30px; */
+    line-height: 30px ;
+    text-align: center;
+    border-radius: 20px;
+}
+.social-linh{
+    text-align: end;
+}
+h2{
+    font-size: 14px;
+    padding-top: 40px;
+    text-align: end;
+    color: white;
+}
+.fb{
+    margin: 100px 0 0 0 ; 
+    color:white;
+}
+.fb:hover{
+    color: #ce700c;
+}
+.ig{
+    margin: 100px 0 0 40px;
+    color:white;
+}
+.ig:hover{
+    color: #ce700c;
+}
+.tw{
+    margin: 100px 0 0 40px;
+    color:white;
+}
+.tw:hover{color: #ce700c;}
+
+.gg{
+    margin: 100px 0 0 40px;
+    color:white;
+}
+.gg:hover{
+    color:#ce700c;
+}

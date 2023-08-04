@@ -1,0 +1,280 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.fullwh{
+    background-color: black;
+}
+.container-Profile{
+    background-color: black;
+    color: aliceblue;
+    width: 1100px;
+    height: 1000px;
+    margin: 0 auto;
+}
+.elm-pr{
+    color: aliceblue;
+}
+.acc-info{
+    color: aliceblue;
+}
+.avatar-pr{
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.avt-name{
+    width: 300px;
+    height: 350px;
+    background-image: url(http://puui.qpic.cn/media_img/lena/PICzbdtb6_392_380/0);
+    padding-top: 80px;
+    border-radius: 10px;
+}
+.avt-name p{
+    font-size: 16px;
+    text-align: center;
+    padding-top: 20px;
+}
+.nav-pr{
+    color: aliceblue;
+    width: 318px;
+    height: 750px;
+
+    
+}
+.optional{
+    width: 300px;
+    height: 231px;
+    background-color: hsl(0deg 16.99% 96.77% / 10%);
+    border-radius: 10px;
+}
+.history{
+ width: 262px;
+ height: 77px;
+ border-bottom: 1px solid rgb(119, 118, 116);
+ margin-left: 20px;
+ line-height: 77px;
+ display: flex;
+ /* padding-left: 20px; */
+}
+.history h1:hover{
+    color: #ff6022;
+}
+.history h1{
+    color: hsla(0,0%,100%,.5);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
+.icon-hs{
+    margin-top: 28px;
+    margin-right: 20px;
+    color: hsla(0,0%,100%,.5);
+}
+.icon-hs:hover{
+    color: #ff6022;
+}
+.user-optinal{
+    width: 262px;
+ height: 77px;
+ border-bottom: 1px solid rgb(119, 118, 116);
+ margin-left: 20px;
+ line-height: 77px;
+ display: flex;
+}
+.user-optinal h1:hover{
+    color: #ff6022;
+}
+.user-optinal h1{
+    color: hsla(0,0%,100%,.5);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
+.user-icon-pr{
+    margin-top: 28px;
+    margin-right: 20px;
+    color: hsla(0,0%,100%,.5);
+}
+.user-icon-pr:hover{
+    color: #ff6022;
+}
+.logout{
+    width: 262px;
+    height: 77px;
+    /* border-bottom: 1px solid rgb(119, 118, 116); */
+    margin-left: 20px;
+    line-height: 77px;
+    display: flex;
+}
+.logout h1{
+    color: hsla(0,0%,100%,.5);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
+.logout h1:hover{
+    color: #ff6022;
+}
+.logout-icon{
+    margin-top: 28px;
+    margin-right: 20px;
+    color: hsla(0,0%,100%,.5);
+}
+.logout-icon:hover{
+    color: #ff6022;
+}
+.container-Profile{
+    display: flex;
+}
+.picture-pr{
+    width: 80px;
+    height: 80px;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+ */}
+ .heard-if{
+    display: flex;
+    width: 562px;
+    height: 24px;
+    line-height: 24px;
+
+ }
+ .heard-if h1{
+    font-size: 16px;
+    font-weight: 700;
+    padding-right: 350px;
+ }
+ .heard-if span{
+    font-size: 16px;
+    color: #ff6022;
+    font-weight: 700;
+    width:150px ;
+    height: 35px;
+ }
+ .heard-if span:hover{
+    line-height: 35px;
+    text-align: center;
+    background-color: #ff6022;
+    color: aliceblue;
+    border-radius: 10px;
+ }
+ .info-pr{
+    width: 700px;
+    height: 550px;
+    background-color: hsl(0deg 16.99% 96.77% / 10%);
+    border-radius: 10px;
+    margin-left: 75px;
+    padding:20px 70px 20px 70px;
+    position: relative;
+ }
+ .profile-picture{
+    margin-top: 20px;
+    display: flex;
+    width: 562px;
+    height: 80px;
+    line-height: 80px;
+ }
+ .profile-picture span {
+    padding-right: 80px;
+    font-weight: 400;
+    font-size: 12px;
+    color: hsla(0,0%,100%,.5);
+ }
+ .name-pr{
+    margin-top: 20px;
+    display: flex;
+    width: 562px;
+    height: 80px;
+    line-height: 80px;
+    padding-right: 80px;
+    font-weight: 400;
+    font-size: 12px;
+    color: hsla(0,0%,100%,.5);
+ }
+ .birthday-pr{
+    margin-top: 15px;
+    display: flex;
+    width: 562px;
+    height: 80px;
+    line-height: 80px;
+    padding-right: 80px;
+    font-weight: 400;
+    font-size: 12px;
+    color: hsla(0,0%,100%,.5);
+ }
+ .gender-pr{
+    margin-top: 15px;
+    display: flex;
+    width: 562px;
+    height: 80px;
+    line-height: 80px;
+    padding-right: 80px;
+    font-weight: 400;
+    font-size: 12px;
+    color: hsla(0,0%,100%,.5);
+ }
+ .emailcontact-pr{
+    margin-top: 15px;
+    display: flex;
+    width: 562px;
+    height: 80px;
+    line-height: 80px;
+    padding-right: 80px;
+    font-weight: 400;
+    font-size: 12px;
+    color: hsla(0,0%,100%,.5);
+ }
+ .acc-info{
+    width: 700px;
+    height: 250px;
+    margin-top: 60px;
+    border-radius: 10px;
+    background-color: hsl(0deg 16.99% 96.77% / 10%);
+    position: absolute;
+    right: 0px;
+    padding:20px 70px 20px 70px;
+ }
+ .acc-info p{
+    font-size: 16px;
+    font-weight: 700;
+ }
+ .numberphone{
+    font-size: 12px;
+    color: hsla(0,0%,100%,.5);
+    padding-top: 30px;
+ }
+ .acc-email{
+    font-size: 12px;
+    color: hsla(0,0%,100%,.5);
+    padding-top: 30px;
+ }
+ .reset-pw{
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    color: #ff6022;
+    margin-top: 50px;
+    font-weight: 700;
+ }
+ .reset-pw:hover{
+    border-radius: 10px;
+    background-color: #ff6022;
+    color: aliceblue;
+    text-align: center;
+    line-height: 40px;
+ }
+.out{
+    width: 40px;
+    height: 30px;
+    padding: 20px 0 0 20px;
+    color: #ff6022;
+}
+.out:hover{
+    color: aliceblue;
+}
+
