@@ -11,6 +11,9 @@
 }
 .searchBar > button {
   border: none;
+  width: 60px;
+  height: 40px;
+  font-weight: 800;
   border-radius: 5px;
   background: -webkit-linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
 }

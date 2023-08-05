@@ -1,8 +1,8 @@
 .detail {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0);
-  
+  margin: 0 auto;
 }
 
 .head {
@@ -59,7 +59,7 @@
   color: white;
 }
 .detail .head .headPart .btn {
-  width: 100vw;
+  width: 100%;
   height: 50px;
   padding: 0 50px;
   display: flex;
@@ -143,8 +143,8 @@
 
 /* Cast */
 
-.topCast{
-  width: 100vw;
+.topCast {
+  width: 100%;
   height: 300px;
   color: white;
   padding: 50px 0 0 50px;
