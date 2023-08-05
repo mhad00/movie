@@ -3,9 +3,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
 }
 .navLinkPage > a {
   text-decoration: none;
   color: black;
+  width: 20px;
   font-size: larger;
+  font-weight: none;
+}
+.navLinkPage > a:hover {
+  font-weight: bold;
+  transition: font-weight 0.4s ease-in;
 }

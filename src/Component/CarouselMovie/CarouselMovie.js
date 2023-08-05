@@ -6,20 +6,18 @@ import { Link, useNavigate } from "react-router-dom";
 import CircleRating from "../CircleRating/CircleRating";
 
 const CarouselMovie = ({ movie, loading }) => {
-  console.log("movie", movie);
-  const [prev, setPrev] = useState(7);
-  console.log(prev);
+  const [prev, setPrev] = useState(6);
   const carouselContainer = useRef();
   const navigation = (direction) => {
-    prev >= 7
+    prev >= 6
       ? direction === "right"
         ? prev >= movie.length
           ? setPrev(prev)
           : setPrev(prev + 1)
-        : prev < 8
-        ? setPrev(7)
+        : prev < 7
+        ? setPrev(6)
         : setPrev(prev - 1)
-      : setPrev(7);
+      : setPrev(6);
   };
   const fadeMovie = (direction) => {};
   const skeleton = () => {
@@ -46,11 +44,10 @@ const CarouselMovie = ({ movie, loading }) => {
             onClick={() => navigation("left")}
           />
           {movie
-            .slice(prev - 7, prev)
+            .slice(prev - 6, prev)
             .map(({ poster_path, title, release_date, vote_average }, id) => {
               const date = new Date(release_date);
               const dateElm = date.toDateString();
-              console.log(poster_path);
               return (
                 <div key={id} className="carouselItem fade">
                   <Link to="/Detail">

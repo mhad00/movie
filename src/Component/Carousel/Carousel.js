@@ -5,36 +5,43 @@ import { useEffect } from "react";
 
 const Carousel = () => {
   const { data, linkPath } = UseFetchApi();
-  const [logoPath, setLogoPath] = useState();
-  const logo = async () => {
-    try {
-      const img =
-        (await Math.floor(Math.random())) * data?.production_companies?.length;
-      return setLogoPath(
-        `${linkPath?.images?.base_url}${linkPath?.images?.backdrop_sizes[3]}${data?.production_companies[img]?.logo_path}`
-      );
-    } catch (error) {
-      console.log("error");
-    }
+  const [logoPath, setLogoPath] = useState([]);
+  const array = async (logo_path) => {
+    const logoPathSrc =
+      await `${linkPath?.images?.base_url}${linkPath?.images?.backdrop_sizes[3]}${logo_path}`;
+    await logoPath.push(logoPathSrc);
+    setLogoPath(logoPath);
   };
   useEffect(() => {
-    logo();
-  }, [logoPath]);
+    data?.map(async (item) => {
+      const { production_companies } = await item;
+      console.log(production_companies);
+      production_companies?.map(async (item) => {
+        const { logo_path } = await item;
+
+        return logo_path === null ? "" : array(logo_path);
+      });
+    });
+  });
+  const item = () => {
+    for (let i = 0; i < logoPath.length - 5; i++) {
+      return Math.floor(Math.random() * i);
+    }
+  };
+  console.log(item());
   return (
-    <div className="carousel">
-      <div className="logoCompany">
-        <img src={logoPath} alt="" />
+    <>
+      <div className="carousel">
+        {logoPath?.slice(item(), item() + 5).map((item) => {
+          console.log(item);
+          return (
+            <div className="logoCompany">
+              <img src={item} alt="" />
+            </div>
+          );
+        })}
       </div>
-      <div className="logoCompany">
-        <img src={logoPath} alt="" />
-      </div>
-      <div className="logoCompany">
-        <img src={logoPath} alt="" />
-      </div>
-      <div className="logoCompany">
-        <img src={logoPath} alt="" />
-      </div>
-    </div>
+    </>
   );
 };
 
