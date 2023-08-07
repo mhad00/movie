@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UseFetchApi from "../../Hook/UseFetchApi/UseFetchApi";
 import "./Carousel.css";
+import { useEffect } from "react";
 
 const Carousel = () => {
   const { data, linkPath } = UseFetchApi();
@@ -16,7 +17,9 @@ const Carousel = () => {
       console.log("error");
     }
   };
-  logo();
+  useEffect(() => {
+    logo();
+  }, [logoPath]);
   return (
     <div className="carousel">
       <div className="logoCompany">

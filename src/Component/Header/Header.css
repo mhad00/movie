@@ -36,9 +36,9 @@ span {
 }
 .heroSearch {
   width: 95vw;
-  padding: 0 auto;
+  padding: 30px auto;
   position: absolute;
-  top: -20px;
+  top: -10px;
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -49,6 +49,7 @@ span {
   display: flex;
   align-items: center;
   gap: 20px;
+  font-size: larger;
 }
 h2,
 h5 {

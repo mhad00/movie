@@ -4,7 +4,7 @@ import "./SwitchTab.css";
 
 const SwitchTab = ({ data, onChangeTab }) => {
   const [left, setLeft] = useState(0);
-  const [selectTab, setSelectTab] = useState();
+  const [selectTab, setSelectTab] = useState(0);
   const onTabHandle = (tab, index) => {
     setLeft(index * 100);
     setSelectTab(index);
@@ -18,6 +18,7 @@ const SwitchTab = ({ data, onChangeTab }) => {
             <span
               key={index}
               className={`tabItem ${selectTab === index ? "active" : ""}`}
+              onChange={(e) => console.log(e.target.value)}
               onClick={() => onTabHandle(tab, index)}
             >
               {tab}
