@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 const urlPoster = (url) => {
   return `https://api.themoviedb.org/3/movie/${url}?api_key=92ad04cfd3d58b260eba69def4b861b4`;
 };

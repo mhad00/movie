@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../Component/Header/Header";
 import Carousel from "../../Component/Carousel/Carousel";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import SwitchTab from "../../Component/SwitchTab/SwitchTab";
 import "./Home.css";
 import CarouselMovie from "../../Component/CarouselMovie/CarouselMovie";
 import UseFetchMovieCarousel from "../../Hook/UseFetchMovieCarousel/UseFetchMovieCarousel";
 import UseFetchMoviePublic from "../../Hook/UseFetchMoviePublic/UseFetchMoviePublic";
+import NavlinkPage from "../../Component/NavlinkPage/NavlinkPage";
+import SearchBar from "../../Component/SearchBar/SearchBar";
 
 const Home = () => {
   const [endpoint, setEndpoint] = useState("day");
@@ -23,9 +25,35 @@ const Home = () => {
   const onChangeTab = (tab) => {
     setEndpoint(tab === "Day" ? "day" : "week");
   };
-  console.log(movieNowPlaying, movieTopRated);
   return (
-    <div className="detail">
+    <div className="homePage">
+      <div className="heroSearch">
+        <div>
+          <Link
+            to="/"
+            style={{
+              display: "flex",
+            }}
+          >
+            <img src="" alt="" />
+            <p
+              style={{
+                fontSize: "40px",
+                fontWeight: "bold",
+              }}
+            >
+              MovieMaster
+            </p>
+          </Link>
+        </div>
+        <NavlinkPage />
+        <div className="searchRight">
+          <SearchBar />
+          <Link to="/Login">
+            <span>Login</span>
+          </Link>
+        </div>
+      </div>
       <Header />
       <Carousel />
       <div className="movieList">
@@ -49,6 +77,7 @@ const Home = () => {
         <span>Up Coming</span>
         <CarouselMovie movie={movieUpComing} loading={loadingUpComing} />
       </div>
+
       <Outlet />
     </div>
   );

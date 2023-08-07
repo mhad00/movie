@@ -1,3 +1,70 @@
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
 .Header {
   position: relative;
   width: 100%;
@@ -8,14 +75,11 @@
 a {
   text-decoration: none;
 }
-a:hover {
-  font-weight: bold;
-}
 p,
 span {
   color: white;
 }
-.Header > img {
+.Header > a > img {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -34,47 +98,62 @@ span {
   bottom: 0;
   left: 0;
 }
-.heroSearch {
-  width: 95vw;
-  padding: 30px auto;
-  position: absolute;
-  top: -10px;
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  justify-content: space-between;
-  align-items: center;
-}
-.searchRight {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: larger;
-}
-h2,
-h5 {
+
+h2 {
   color: white;
 }
-.description {
+.Header > a > .description {
+  color: rgb(215, 213, 213);
   position: absolute;
   top: 250px;
   width: 400px;
   height: 250px;
   overflow: hidden;
-  left: 50px;
+  left: 100px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Header > a > .description > p {
+  color: rgb(184, 181, 181);
 }
 .button_travel {
   position: absolute;
   bottom: 10px;
-  left: 50px;
+  left: 100px;
   display: flex;
   width: 400px;
   justify-content: space-between;
 }
-.button_travel > button {
+.button_travel > a > button {
   border-radius: 5px;
   border: none;
   height: 40px;
   color: white;
   padding: 4px 25px;
+}
+.button_travel > a:hover {
+  transform: scale(1.3);
+  transition: transform 0.4s linear;
+}
+.button_travel > a {
+  transform: scale(1);
+}
+.swiper-pagination {
+  display: none;
+}
+div > .swiper-button-next {
+  opacity: 0;
+}
+div > .swiper-button-next:hover {
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+div > .swiper-button-prev {
+  opacity: 0;
+}
+div > .swiper-button-prev:hover {
+  opacity: 1;
+  transition: opacity 0.3s linear;
 }
