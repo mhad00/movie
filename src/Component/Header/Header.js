@@ -13,7 +13,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 const Header = () => {
   const { data, loading, linkPath, error, description } = UseFetchApi();
   console.log("data", data);
-  console.log(linkPath);
+  console.log(`linkpath`,linkPath);
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {

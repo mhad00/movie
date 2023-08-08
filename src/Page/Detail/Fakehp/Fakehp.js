@@ -3,13 +3,15 @@ import "./Fakehp.css";
 import Card1 from "../Card1/Card1";
 import { MockData } from "../Data/MockData";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import Detail from "../Detail";
 const Fakehp = () => {
   const [defaultData, setDefaultData] = useState({});
   useEffect(() => {
     setDefaultData(MockData[0]);
     console.log(MockData[0]);
   }, []);
-
+  
   return (
     <div className="watchListPage">
       <div className="wlOption">1</div>
@@ -23,6 +25,9 @@ const Fakehp = () => {
           <hr />
           <div className="wlMovieOverview">
             <p>{defaultData.story}</p>
+          </div>
+          <div className="wlWatch">
+            <Link to={`/fakehp/${defaultData.id}`}> Watch</Link>
           </div>
         </div>
 
