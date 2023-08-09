@@ -18,7 +18,9 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div style={{width:"auto", height:"100px", backgroundColor:"pink"}}></div>
+      <div
+        style={{ width: "auto", height: "100px", backgroundColor: "pink" }}
+      ></div>
       <Routes>
         <Route path="/" element={<Home />}>
           Home
@@ -29,11 +31,15 @@ function App() {
         <Route path="/login" element={<Login />}>
           Login
         </Route>
-        <Route path="/fakehp" element={<Fakehp addMovie={onAddMovie} />}>
-          <Route path=":id" />
-        </Route>
+        <Route
+          path="/fakehp"
+          element={<Fakehp addMovie={onAddMovie} />}
+        ></Route>
+        <Route path="/fakehp/:id" element={<Detail />}></Route>
       </Routes>
-      <div style={{width:"auto", height:"300px", backgroundColor:"pink"}}></div>
+      <div
+        style={{ width: "auto", height: "300px", backgroundColor: "pink" }}
+      ></div>
     </BrowserRouter>
   );
 }

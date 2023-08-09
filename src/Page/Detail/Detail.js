@@ -9,13 +9,29 @@ import {
 } from "react-icons/fa";
 import Cast from "./Cast/Cast";
 import Readmore from "./ReadMore/Readmore";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { MockData } from "./Data/MockData";
 
 const Detail = (props) => {
-  const {addMovie} = props
+  const { id } = useParams();
+  const [movie,setMovie] = useState([])
+  const { addMovie } = props;
   const [like, setLike] = useState(false);
 
+  useEffect(() => {
+    let movieDetail = MockData.filter((movie) => {
+      if (movie.id == id) {
+        return movie;
+      }
+    });
+    console.log(movieDetail[0]);
+    setMovie(movieDetail[0]);
+  },[]);
+
   const onLikeHandle = () => {
-    setLike(!like);
+    setLike(!like)
+    console.log(typeof(movie.img));;
   };
   const lorem = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod maxime
   nam explicabo est, alias exercitationem laboriosam assumenda deleniti
@@ -33,18 +49,18 @@ const Detail = (props) => {
   voluptatibus impedit libero voluptates eum omnis enim et labore
   distinctio nam reiciendis quo animi, sequi consequatur dolor illo
   tenetur. Eligendi, a facilis illo nihil reiciendis est? Accusantium,
-  rerum. Vel, voluptas? Error?`
+  rerum. Vel, voluptas? Error?`;
   return (
     <div className="detail">
       <div className="head">
         <div className="shadow-top"></div>
         <div className="background">
-          <img className="img" src="./avenger.jpg" alt="" />
+          <img className="img" src={`${movie.img}`} alt="" />
         </div>
         <div className="headPart">
           <div className="info">
-            <p className="type"> 123458 </p>
-            <h1 className="title">Lorem ipsum dolor sit amet.</h1>
+            <p className="type"> {id} </p>
+            <h1 className="title">{movie.name}</h1>
             <p className="type2">Lorem ipsum dolor sit.</p>
           </div>
           <div className="btn">
@@ -53,7 +69,12 @@ const Detail = (props) => {
                 <FaPlay size="20px" />
                 Play Now
               </button>
-              <button className="btn2" onClick={() => {addMovie()}}>
+              <button
+                className="btn2"
+                onClick={() => {
+                  addMovie();
+                }}
+              >
                 <FaBookmark size="20px" />
                 Add Watchlist
               </button>
@@ -82,9 +103,11 @@ const Detail = (props) => {
       </div>
       {/* Storyline */}
       <div className="description-detail">
-        <div className="storyLine"><h3>Story Line</h3></div>
+        <div className="storyLine">
+          <h3>Story Line</h3>
+        </div>
         <div className="overview">
-          <Readmore p={lorem} max={500} ></Readmore>
+          <Readmore p={movie.story} max={500}></Readmore>
         </div>
       </div>
       <div className="topCast">
