@@ -6,21 +6,27 @@ import Login from "./Page/Login/Login";
 import Detail from "./Page/Detail/Detail";
 import Fakehp from "./Page/Detail/Fakehp/Fakehp";
 import { useState } from "react";
+import Watchlist from "./Page/Detail/Watchlist/Watchlist";
 
 function App() {
-  const [watchlist, setWatchList] = useState([]);
+  const [watchList, setWatchList] = useState([]);
   const onAddMovie = (movie) => {
-    const newMovie = {
-      ...movie,
-    };
-    setWatchList([...watchlist, newMovie]);
+    const isMovieInList = watchList.find((item) => watchList.id === item.id);
+    if (isMovieInList) {
+      return;
+    } else {
+      setWatchList([...watchList, movie]);
+    }
+  };
+
+  const onDeleteMovie = (id) => {
+    const filteredList = watchList.filter((movie) => movie.id !== id);
+    setWatchList(filteredList);
   };
 
   return (
     <BrowserRouter>
-      <div
-        style={{ width: "auto", height: "100px", backgroundColor: "pink" }}
-      ></div>
+      
       <Routes>
         <Route path="/" element={<Home />}>
           Home
@@ -35,11 +41,13 @@ function App() {
           path="/fakehp"
           element={<Fakehp addMovie={onAddMovie} />}
         ></Route>
-        <Route path="/fakehp/:id" element={<Detail />}></Route>
+        <Route
+          path="/fakehp/:id"
+          element={<Detail addMovie={onAddMovie} deleteMovie={onDeleteMovie}  />}
+        ></Route>
+        <Route path="/watchlist" element={<Watchlist watchList={watchList}/>}></Route>
       </Routes>
-      <div
-        style={{ width: "auto", height: "300px", backgroundColor: "pink" }}
-      ></div>
+      
     </BrowserRouter>
   );
 }

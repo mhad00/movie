@@ -5,7 +5,7 @@ const Cast = () => {
   return (
       <Link to="/" className="castDetail">
         <div className="charImg">
-          <img src="./fight.jpg" alt="" />
+          <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="" />
         </div>
         <div className="actor">
           <h2>name1222222222222222223</h2>

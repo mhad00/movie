@@ -1,0 +1,43 @@
+.watchListPage {
+    width: auto;
+    height: 100vh;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wlOption {
+    width: auto;
+    height: 100px;
+    background-color: black;
+  }
+  
+  .wlSection {
+    width: auto;
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+    /* justify-content: space-between; */
+  
+  }
+  
+  .wlLSide{
+      width:30%;
+      height: 100%;
+      background-color: brown;
+      display: flex;
+      flex-direction: column;
+  }
+  .wlMovieOverview{
+      width: auto;
+      height: 200px;
+      word-wrap: break-word;
+  }
+  .wlRSide{
+      width: 70%;
+      height: auto;
+      background-color: blueviolet;
+      display: flex;
+      flex-wrap: wrap;
+  
+  }

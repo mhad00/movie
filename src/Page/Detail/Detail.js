@@ -14,14 +14,15 @@ import { useEffect } from "react";
 import { MockData } from "./Data/MockData";
 
 const Detail = (props) => {
+  const {addMovie, deleteMovie} = props;
+
   const { id } = useParams();
   const [movie,setMovie] = useState([])
-  const { addMovie } = props;
-  const [like, setLike] = useState(false);
+    const [like, setLike] = useState(false);
 
   useEffect(() => {
     let movieDetail = MockData.filter((movie) => {
-      if (movie.id == id) {
+      if (movie.id === id) {
         return movie;
       }
     });
@@ -59,7 +60,7 @@ const Detail = (props) => {
         </div>
         <div className="headPart">
           <div className="info">
-            <p className="type"> {id} </p>
+            <p className="type"> {movie.type} </p>
             <h1 className="title">{movie.name}</h1>
             <p className="type2">Lorem ipsum dolor sit.</p>
           </div>
@@ -72,7 +73,8 @@ const Detail = (props) => {
               <button
                 className="btn2"
                 onClick={() => {
-                  addMovie();
+                  console.log(movie);
+                  addMovie(movie);
                 }}
               >
                 <FaBookmark size="20px" />
@@ -107,7 +109,7 @@ const Detail = (props) => {
           <h3>Story Line</h3>
         </div>
         <div className="overview">
-          <Readmore p={movie.story} max={500}></Readmore>
+          {/* <Readmore p={movie.story} max={500}></Readmore> */}
         </div>
       </div>
       <div className="topCast">
