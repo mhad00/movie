@@ -35,7 +35,7 @@ const Detail = (props) => {
   useEffect(() => {
     fetch(urlMovie)
       .then((res) => res.json())
-      .then((res) => setDataDetail(res.results[0]));
+      .then((res) => setDataDetail(res));
     fetch(urlImg)
       .then((res) => res.json())
       .then((res) => setDataImg(res));
@@ -75,9 +75,9 @@ const Detail = (props) => {
               <button
                 className="btn2"
                 onClick={() => {
-                  // console.log(movie);
-                  // addMovie(movie);
-                  navigate("/watchlist");
+                  console.log(movie);
+                  addMovie(dataImg);
+                  navigate("/home/watchlist");
                 }}
               >
                 <FaBookmark size="20px" />

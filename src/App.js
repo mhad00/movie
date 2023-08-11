@@ -4,17 +4,18 @@ import Home from "./Page/Home/Home";
 import Category from "./Component/Category/Category";
 import Login from "./Page/Login/Login";
 import Detail from "./Page/Detail/Detail";
-import Fakehp from "./Page/Detail/Fakehp/Fakehp";
 import { useState } from "react";
 import Watchlist from "./Page/Detail/Watchlist/Watchlist";
 import { createContext } from "react";
-import NavlinkPage from "./Component/NavlinkPage/NavlinkPage";
-import SearchBar from "./Component/SearchBar/SearchBar";
-import Headsearch from "./Component/headsearch/Headsearch";
+import { useEffect } from "react";
 
 function App() {
   const [watchList, setWatchList] = useState([]);
 
+  useEffect(() => {
+    localStorage.getItem("watchList", JSON.stringify(watchList))
+  }, [watchList]);
+  
   const onAddMovie = (movie) => {
     const isMovieInList = watchList.find((item) => movie.id === item.id);
     if (isMovieInList) {
@@ -22,6 +23,7 @@ function App() {
     } else {
       console.log("app.js addmovie", movie);
       setWatchList([...watchList, movie]);
+      localStorage.setItem("watchList", JSON.stringify(watchList));
     }
   };
 
@@ -43,13 +45,13 @@ function App() {
           </Route>
           <Route
             path="/home/:id"
-            element={
-              <Detail addMovie={onAddMovie} deleteMovie={onDeleteMovie} />
-            }
+            element={<Detail addMovie={onAddMovie} />}
           ></Route>
           <Route
-            path="/watchlist"
-            element={<Watchlist watchList={watchList} />}
+            path="/home/watchlist"
+            element={
+              <Watchlist watchList={watchList} deleteMovie={onDeleteMovie} />
+            }
           ></Route>
 
           <Route path="/login" element={<Login />}>
