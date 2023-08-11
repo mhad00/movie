@@ -2,7 +2,7 @@ export const MockData = [
   {
     name: "Avenger",
     adult: false,
-    id: "0",
+    id: "1a",
     img: "../avenger.jpg",
     type: "Movie",
     story:
@@ -12,7 +12,7 @@ export const MockData = [
   {
     name: "Endgame",
     adult: false,
-    id: "12",
+    id: "2b",
     img: "../endgame.jpg",
     type: "Movie",
     story:
@@ -22,7 +22,7 @@ export const MockData = [
   {
     name: "Fight club",
     adult: true,
-    id: "2",
+    id: "3c",
     img: "../fight.jpg",
     type: "Series",
     story:

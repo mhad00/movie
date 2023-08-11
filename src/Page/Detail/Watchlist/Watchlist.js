@@ -8,7 +8,7 @@ const Watchlist = (props) => {
   const {watchList} = props;
   const [defaultData, setDefaultData] = useState({});
     useEffect(()=>{
-      console.log(watchList);
+      console.log("watchlist: ",watchList);
     })
   return (
     <div className="watchListPage">

@@ -10,11 +10,13 @@ import Watchlist from "./Page/Detail/Watchlist/Watchlist";
 
 function App() {
   const [watchList, setWatchList] = useState([]);
+
   const onAddMovie = (movie) => {
-    const isMovieInList = watchList.find((item) => watchList.id === item.id);
+    const isMovieInList = watchList.find((item) => movie.id === item.id);
     if (isMovieInList) {
       return;
     } else {
+      console.log("app.js addmovie",movie);
       setWatchList([...watchList, movie]);
     }
   };

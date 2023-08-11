@@ -12,10 +12,13 @@ import Readmore from "./ReadMore/Readmore";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { MockData } from "./Data/MockData";
+import {useNavigate} from 'react-router-dom'
+
 
 const Detail = (props) => {
   const {addMovie, deleteMovie} = props;
 
+  const navigate = useNavigate();
   const { id } = useParams();
   const [movie,setMovie] = useState([])
     const [like, setLike] = useState(false);
@@ -75,6 +78,7 @@ const Detail = (props) => {
                 onClick={() => {
                   console.log(movie);
                   addMovie(movie);
+                  navigate('/watchlist')
                 }}
               >
                 <FaBookmark size="20px" />
