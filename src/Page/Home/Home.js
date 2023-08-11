@@ -54,6 +54,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
+
       <Header />
       <Carousel />
       <div className="movieList">

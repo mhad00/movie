@@ -1,0 +1,142 @@
+.userSignup {
+  width: 100%;
+  height: 567px;
+  background-color: white;
+}
+.signUp {
+  font-family: var(--font-Roboto);
+  border: none;
+  height: 395px;
+  width: 832px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  box-shadow: -3px 1px 18px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+}
+.signUp > .logo {
+  width: 50%;
+  height: 100%;
+  background-color: #faf096;
+  border-bottom-left-radius: inherit;
+  border-top-left-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+.logo > h2 {
+  color: black;
+  font-size: 68px;
+  line-height: 80px;
+  text-shadow: -4px -4px 6px rgb(51 63 68 / 44%);
+}
+.close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 799px;
+  top: 8px;
+  font-family: "Red Rose";
+  font-style: normal;
+  font-weight: 700;
+  float: right;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.signUp > .register {
+  width: 50%;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+h3 {
+  width: 319.17px;
+  height: 28px;
+  font-size: x-large;
+}
+input {
+  width: 300px;
+  border: 1px solid black;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.date {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.date > input {
+  width: calc(100% / 3 - 5px);
+}
+.psw {
+  width: 300px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.psw > input {
+  width: 100%;
+  border: 1px solid black;
+  height: 30px;
+}
+.psw > button {
+  position: absolute;
+  background-color: white;
+  font-size: x-small;
+  border: none;
+  right: 10px;
+  top: 4px;
+}
+.rePsw {
+  width: 300px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.rePsw > input {
+  width: 100%;
+  border: 1px solid black;
+  height: 30px;
+}
+.rePsw > button {
+  position: absolute;
+  background-color: white;
+  font-size: x-small;
+  border: none;
+  right: 10px;
+  top: 4px;
+}
+.b-signUp {
+  width: 300px;
+  height: 40px;
+  background-color: #00cc36;
+  border: none;
+  border-radius: 5px;
+  box-shadow: -3px 1px 18px rgba(0, 0, 0, 0.25);
+}
+.b-signUp {
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+}
+.convertLogin {
+  align-self: self-end;
+  border: none;
+  background-color: white;
+  margin-right: 100px;
+  color: #00cc36;
+  font-weight: 700;
+}

@@ -42,50 +42,53 @@ const Header = () => {
           const date = new Date(item.release_date);
           const dateElm = date.toDateString();
           return (
-            <SwiperSlide>
-              <div className="Header">
-                <Link to="/Detail">
-                  <img src={bg} alt="" />
-                  <div className="opacity-layer"></div>
-                  <div className="description">
-                    <h2>{item.original_title}</h2>
-                    <h4>{dateElm}</h4>
-                    <p>{item.overview}</p>
-                  </div>
-                </Link>
-                <div className="button_travel">
+            <>
+              <SwiperSlide>
+                <div className="Header">
                   <Link to="/Detail">
-                    <button
-                      style={{
-                        backgroundColor: "#17aa17b8",
-                      }}
-                    >
-                      Play Now
-                    </button>
-                  </Link>
-                  <Link to="/">
-                    <button
-                      style={{
-                        backgroundColor: "rgb(146 137 137 / 17%)",
-                      }}
-                    >
-                      Watch Trailer
-                    </button>
-                  </Link>
-                  <Link to="/">
-                    <button
-                      style={{
-                        backgroundColor: "rgb(21 10 168 / 35%)",
-                      }}
-                    >
-                      Add Watchlist
-                    </button>
+                    <div className="opacity-layer2"></div>
+                    <img src={bg} alt="" />
+                    <div className="opacity-layer"></div>
+                    <div className="description">
+                      <h2>{item.original_title}</h2>
+                      <h4>{dateElm}</h4>
+                      <p>{item.overview}</p>
+                    </div>
                   </Link>
                 </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            </>
           );
         })}
+        <div className="button_travel">
+          <Link to="/Detail">
+            <button
+              style={{
+                backgroundColor: "#17aa17b8",
+              }}
+            >
+              Play Now
+            </button>
+          </Link>
+          <Link to="/">
+            <button
+              style={{
+                backgroundColor: "rgb(146 137 137 / 17%)",
+              }}
+            >
+              Watch Trailer
+            </button>
+          </Link>
+          <Link to="/">
+            <button
+              style={{
+                backgroundColor: "rgb(21 10 168 / 35%)",
+              }}
+            >
+              Add Watchlist
+            </button>
+          </Link>
+        </div>
         <div
           className="autoplay-progress"
           slot="container-end"
