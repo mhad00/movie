@@ -8,6 +8,7 @@ import CarouselMovie from "../../Component/CarouselMovie/CarouselMovie";
 import UseFetchMovieCarousel from "../../Hook/UseFetchMovieCarousel/UseFetchMovieCarousel";
 import UseFetchMoviePublic from "../../Hook/UseFetchMoviePublic/UseFetchMoviePublic";
 import Headsearch from "../../Component/headsearch/Headsearch";
+import Footer from "../../Component/Footer/Footer";
 
 const Home = (user, setUserMovie) => {
   const [endpoint, setEndpoint] = useState("day");
@@ -52,6 +53,7 @@ const Home = (user, setUserMovie) => {
       </div>
 
       <Outlet />
+      <Footer/>
     </div>
   );
 };
