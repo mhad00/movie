@@ -36,7 +36,7 @@ const Detail = (props) => {
   useEffect(() => {
     fetch(urlMovie)
       .then((res) => res.json())
-      .then((res) => setDataDetail(res));
+      .then((res) => setDataDetail(res.results[0]));
     fetch(urlImg)
       .then((res) => res.json())
       .then((res) => setDataImg(res));
@@ -97,6 +97,7 @@ const Detail = (props) => {
                 className="btn5"
                 onClick={() => {
                   onLikeHandle();
+                  console.log("data key",dataDetail.key);
                 }}
               >
                 <FaThumbsUp size="20px" />
@@ -114,9 +115,12 @@ const Detail = (props) => {
         </div>
         <div className="overview">{dataImg.overview}</div>
       </div>
-      <div className="topCast">
+      {/* <div className="topCast">
         <h3>Top Cast</h3>
-        {/* <Cast img={dataImg?.backdrop_path} /> */}
+        <Cast img={dataImg?.backdrop_path} />
+      </div> */}
+      <div className="moviePlayer">
+      <iframe className="movieIframe" src={`https://www.youtube.com/embed/${dataDetail.key}`} title={``} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe>
       </div>
       <Footer/>
     </div>

@@ -1,11 +1,6 @@
-*{
-    padding:0;
-    margin:0;
-    
-    /* font-family: 'Arial (sans-serif)'; */
-}
 .fullwh-footer{
     background-color: black;
+    padding: 200px 0 100px 0;
 }
 .container-linh{
     padding-top: 40px;
