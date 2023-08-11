@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../../Context/Context";
 import Headsearch from "../../Component/headsearch/Headsearch";
+import Footer from "../../Component/Footer/Footer";
 
 const Detail = (props) => {
   const { addMovie, deleteMovie } = props;
@@ -117,6 +118,7 @@ const Detail = (props) => {
         <h3>Top Cast</h3>
         {/* <Cast img={dataImg?.backdrop_path} /> */}
       </div>
+      <Footer/>
     </div>
   );
 };

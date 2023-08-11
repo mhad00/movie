@@ -10,6 +10,7 @@ import UseFetchMoviePublic from "../../Hook/UseFetchMoviePublic/UseFetchMoviePub
 import NavlinkPage from "../../Component/NavlinkPage/NavlinkPage";
 import SearchBar from "../../Component/SearchBar/SearchBar";
 import Headsearch from "../../Component/headsearch/Headsearch";
+import Footer from "../../Component/Footer/Footer";
 
 const Home = () => {
   const [endpoint, setEndpoint] = useState("day");
@@ -55,6 +56,7 @@ const Home = () => {
       </div>
 
       <Outlet />
+      <Footer/>
     </div>
   );
 };
