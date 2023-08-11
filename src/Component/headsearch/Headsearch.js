@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import NavlinkPage from "../NavlinkPage/NavlinkPage";
 import SearchBar from "../SearchBar/SearchBar";
+import { FaUser } from "react-icons/fa6";
 
-const Headsearch = () => {
+const Headsearch = (user, setUserMovie) => {
   return (
     <>
       <div className="heroSearch">
@@ -28,9 +29,13 @@ const Headsearch = () => {
         <NavlinkPage />
         <div className="searchRight">
           <SearchBar />
-          <Link to="/Login">
-            <span>Login</span>
-          </Link>
+          {user === false ? (
+            <Link to="/Login">
+              <span>Login</span>
+            </Link>
+          ) : (
+            <FaUser />
+          )}
         </div>
       </div>
     </>

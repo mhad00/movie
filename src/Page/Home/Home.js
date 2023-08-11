@@ -7,11 +7,9 @@ import "./Home.css";
 import CarouselMovie from "../../Component/CarouselMovie/CarouselMovie";
 import UseFetchMovieCarousel from "../../Hook/UseFetchMovieCarousel/UseFetchMovieCarousel";
 import UseFetchMoviePublic from "../../Hook/UseFetchMoviePublic/UseFetchMoviePublic";
-import NavlinkPage from "../../Component/NavlinkPage/NavlinkPage";
-import SearchBar from "../../Component/SearchBar/SearchBar";
 import Headsearch from "../../Component/headsearch/Headsearch";
 
-const Home = () => {
+const Home = (user, setUserMovie) => {
   const [endpoint, setEndpoint] = useState("day");
   const { movieTrending, loadingTrending } = UseFetchMovieCarousel(endpoint);
 
@@ -28,8 +26,7 @@ const Home = () => {
   };
   return (
     <div className="homePage">
-      
-    <Headsearch/>
+      <Headsearch user={user} setUserMovie={setUserMovie} />
       <Header />
       <Carousel />
       <div className="movieList">

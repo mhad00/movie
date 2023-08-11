@@ -14,7 +14,7 @@ import Headsearch from "./Component/headsearch/Headsearch";
 
 function App() {
   const [watchList, setWatchList] = useState([]);
-
+  const [user, setUser] = useState(false);
   const onAddMovie = (movie) => {
     const isMovieInList = watchList.find((item) => movie.id === item.id);
     if (isMovieInList) {
@@ -31,11 +31,17 @@ function App() {
   };
   const AppContext = createContext();
   const [dataMovie, setDataMovie] = useState();
+  const setUserMovie = (item) => {
+    setUser(item);
+  };
   return (
     <BrowserRouter>
       <AppContext.Provider value={{ dataMovie, setDataMovie }}>
         <Routes>
-          <Route path="/" element={<Home />}>
+          <Route
+            path="/"
+            element={<Home user={user} setUserMovie={setUserMovie} />}
+          >
             Home
           </Route>
           <Route path="/category" element={<Category />}>
@@ -52,7 +58,7 @@ function App() {
             element={<Watchlist watchList={watchList} />}
           ></Route>
 
-          <Route path="/login" element={<Login />}>
+          <Route path="/login" element={<Login user={setUserMovie} />}>
             Login
           </Route>
         </Routes>
