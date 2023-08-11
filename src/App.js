@@ -33,16 +33,16 @@ function App() {
   };
   const AppContext = createContext();
   const [dataMovie, setDataMovie] = useState();
-  const setUserMovie = (item) => {
-    setUser(item);
-  };
+  // const setUserMovie = (item) => {
+  //   setUser(item);
+  // };
   return (
     <BrowserRouter>
       <AppContext.Provider value={{ dataMovie, setDataMovie }}>
         <Routes>
           <Route
             path="/"
-            element={<Home user={user} setUserMovie={setUserMovie} />}
+            element={<Home  />}
           >
             Home
           </Route>
@@ -60,7 +60,7 @@ function App() {
             }
           ></Route>
 
-          <Route path="/login" element={<Login user={setUserMovie} />}>
+          <Route path="/login" element={<Login/>}>
             Login
           </Route>
         </Routes>

@@ -29,13 +29,9 @@ const Headsearch = (user, setUserMovie) => {
         <NavlinkPage />
         <div className="searchRight">
           <SearchBar />
-          {user === false ? (
-            <Link to="/Login">
-              <span>Login</span>
-            </Link>
-          ) : (
-            <FaUser />
-          )}
+          <Link to="/Login">
+            <span>Login</span>
+          </Link>
         </div>
       </div>
     </>
