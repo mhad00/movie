@@ -14,7 +14,7 @@
 } */
 .detail .head .background {
   width: 100%;
-  height: 600px;
+  height: 800px;
   /* z-index: 10; */
   position: relative;
 }
@@ -33,10 +33,12 @@
   position: absolute;
   bottom: 0px;
 }
-.background img {
+.background > img {
   width: 100%;
-  height: 600px;
+  height: 100%;
   object-fit: cover;
+
+  /* object-position: ; */
   /* z-index: 0; */
   position: absolute;
 }
@@ -45,18 +47,26 @@
   width: 100%;
   height: 250px;
   position: absolute;
-  top: 300px;
+  /* top: 300px; */
+  bottom: 100px;
   z-index: 10;
 }
 
 .detail .head .headPart .info {
   width: auto;
-  height: 150px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   margin-left: 50px;
   gap: 15px;
   color: white;
+}
+.title {
+  font-size: 50px;
+}
+.type2{
+  display: flex;
+  gap: 20px;
 }
 .detail .head .headPart .btn {
   width: 100%;
@@ -129,8 +139,8 @@
   color: white;
   position: relative;
 }
-.overview{
-  margin-top: 20px ;
+.overview {
+  margin-top: 20px;
 }
 
 .readMore {

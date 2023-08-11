@@ -12,60 +12,59 @@ import Readmore from "./ReadMore/Readmore";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { MockData } from "./Data/MockData";
-import {useNavigate} from 'react-router-dom'
-
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../../Context/Context";
+import Headsearch from "../../Component/headsearch/Headsearch";
 
 const Detail = (props) => {
-  const {addMovie, deleteMovie} = props;
-
+  const { addMovie, deleteMovie } = props;
+  const dataMovie = useContext(AppContext);
   const navigate = useNavigate();
   const { id } = useParams();
-  const [movie,setMovie] = useState([])
-    const [like, setLike] = useState(false);
-
+  console.log(id);
+  const urlMovie = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=92ad04cfd3d58b260eba69def4b861b4`;
+  console.log("urlmovieu", urlMovie);
+  const urlImg = `https://api.themoviedb.org/3/movie/${id}?api_key=92ad04cfd3d58b260eba69def4b861b4`;
+  console.log("urlimg", urlImg);
+  const [movie, setMovie] = useState([]);
+  const [like, setLike] = useState(false);
+  const [dataDetail, setDataDetail] = useState({});
+  const [dataImg, setDataImg] = useState({});
+  console.log("dataImg", dataImg);
   useEffect(() => {
-    let movieDetail = MockData.filter((movie) => {
-      if (movie.id === id) {
-        return movie;
-      }
-    });
-    console.log(movieDetail[0]);
-    setMovie(movieDetail[0]);
-  },[]);
+    fetch(urlMovie)
+      .then((res) => res.json())
+      .then((res) => setDataDetail(res.results[0]));
+    fetch(urlImg)
+      .then((res) => res.json())
+      .then((res) => setDataImg(res));
+  }, []);
 
   const onLikeHandle = () => {
-    setLike(!like)
-    console.log(typeof(movie.img));;
+    setLike(!like);
   };
-  const lorem = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod maxime
-  nam explicabo est, alias exercitationem laboriosam assumenda deleniti
-  reiciendis voluptate sint quas omnis mollitia non voluptatema, sapiente
-  earum. Dolore vero sapiente praesentium est, excepturi iste ut
-  blanditiis deleniti dolores fugit tempora quasi eaque minima optio
-  tempore dolorem reprehenderit autem omnis! Lorem ipsum dolor sit amet
-  consectetur adipisicing elit. Eos quidem, at rerum quaerat magnam
-  praesentium odit voluptas ipsa quo aperiam? Eaque, accusantium. Ipsa,
-  harum quisquam omnis, accusamus modi ut quibusdam officiis velit optio
-  error voluptas cum, corrupti repellendus ab iure eum commodi obcaecati
-  cumque cupiditate? Saepe neque, praesentium ratione qui iusto totam
-  nostrum sapiente atque beatae debitis, nesciunt quas minima, eius
-  fugit sint ipsum consequaatur provident recusandae. Nulla temporibus
-  voluptatibus impedit libero voluptates eum omnis enim et labore
-  distinctio nam reiciendis quo animi, sequi consequatur dolor illo
-  tenetur. Eligendi, a facilis illo nihil reiciendis est? Accusantium,
-  rerum. Vel, voluptas? Error?`;
   return (
     <div className="detail">
+      <Headsearch />
       <div className="head">
         <div className="shadow-top"></div>
         <div className="background">
-          <img className="img" src={`${movie.img}`} alt="" />
+          <img
+            className="img"
+            src={`https://image.tmdb.org/t/p/original${dataImg.backdrop_path}`}
+            alt=""
+          />
         </div>
         <div className="headPart">
           <div className="info">
-            <p className="type"> {movie.type} </p>
-            <h1 className="title">{movie.name}</h1>
-            <p className="type2">Lorem ipsum dolor sit.</p>
+            <p className="type"> {dataImg.release_date} </p>
+            <h1 className="title">{dataImg.title}</h1>
+            <p className="type2">
+              {dataImg.genres?.map((item) => {
+                return <p>{item.name}</p>;
+              })}
+            </p>
           </div>
           <div className="btn">
             <div className="btnLeft">
@@ -76,9 +75,9 @@ const Detail = (props) => {
               <button
                 className="btn2"
                 onClick={() => {
-                  console.log(movie);
-                  addMovie(movie);
-                  navigate('/watchlist')
+                  // console.log(movie);
+                  // addMovie(movie);
+                  navigate("/watchlist");
                 }}
               >
                 <FaBookmark size="20px" />
@@ -112,13 +111,11 @@ const Detail = (props) => {
         <div className="storyLine">
           <h3>Story Line</h3>
         </div>
-        <div className="overview">
-          {/* <Readmore p={movie.story} max={500}></Readmore> */}
-        </div>
+        <div className="overview">{dataImg.overview}</div>
       </div>
       <div className="topCast">
         <h3>Top Cast</h3>
-        <Cast />
+        {/* <Cast img={dataImg?.backdrop_path} /> */}
       </div>
     </div>
   );

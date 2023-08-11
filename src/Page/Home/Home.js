@@ -9,6 +9,7 @@ import UseFetchMovieCarousel from "../../Hook/UseFetchMovieCarousel/UseFetchMovi
 import UseFetchMoviePublic from "../../Hook/UseFetchMoviePublic/UseFetchMoviePublic";
 import NavlinkPage from "../../Component/NavlinkPage/NavlinkPage";
 import SearchBar from "../../Component/SearchBar/SearchBar";
+import Headsearch from "../../Component/headsearch/Headsearch";
 
 const Home = () => {
   const [endpoint, setEndpoint] = useState("day");
@@ -27,34 +28,8 @@ const Home = () => {
   };
   return (
     <div className="homePage">
-      <div className="heroSearch">
-        <div>
-          <Link
-            to="/"
-            style={{
-              display: "flex",
-            }}
-          >
-            <img src="" alt="" />
-            <p
-              style={{
-                fontSize: "40px",
-                fontWeight: "bold",
-              }}
-            >
-              MovieMaster
-            </p>
-          </Link>
-        </div>
-        <NavlinkPage />
-        <div className="searchRight">
-          <SearchBar />
-          <Link to="/Login">
-            <span>Login</span>
-          </Link>
-        </div>
-      </div>
-
+      
+    <Headsearch/>
       <Header />
       <Carousel />
       <div className="movieList">

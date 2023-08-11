@@ -4,8 +4,11 @@ import "./CarouselMovie.css";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import { Link, useNavigate } from "react-router-dom";
 import CircleRating from "../CircleRating/CircleRating";
+import { useContext } from "react";
+import { AppContext } from "../../Context/Context";
 
 const CarouselMovie = ({ movie, loading }) => {
+  const setDataMovie = useContext(AppContext);
   const [prev, setPrev] = useState(6);
   const carouselContainer = useRef();
   const navigation = (direction) => {
@@ -45,27 +48,34 @@ const CarouselMovie = ({ movie, loading }) => {
           />
           {movie
             .slice(prev - 6, prev)
-            .map(({ poster_path, title, release_date, vote_average }, id) => {
-              const date = new Date(release_date);
-              const dateElm = date.toDateString();
-              return (
-                <div key={id} className="carouselItem fade">
-                  <Link to="/Detail">
-                    <img
-                      src={`https://image.tmdb.org/t/p/original${poster_path}`}
-                      alt=""
-                    />
+            .map(
+              (
+                { poster_path, title, release_date, vote_average, id },
+                idMovie
+              ) => {
+                const date = new Date(release_date);
+                const dateElm = date.toDateString();
+                // const data = () => setDataMovie(id);
+                // data();
+                return (
+                  <div key={idMovie} className="carouselItem fade">
+                    <Link to={`home/${id}`}>
+                      <img
+                        src={`https://image.tmdb.org/t/p/original${poster_path}`}
+                        alt=""
+                      />
 
-                    <div className="opacity-layer1"></div>
-                    <CircleRating rating={vote_average.toFixed(1)} />
-                    <div className="textBlock">
-                      <p className="titleMovie">{title}</p>
-                      <p className="date">{dateElm}</p>{" "}
-                    </div>
-                  </Link>
-                </div>
-              );
-            })}
+                      <div className="opacity-layer1"></div>
+                      <CircleRating rating={vote_average.toFixed(1)} />
+                      <div className="textBlock">
+                        <p className="titleMovie">{title}</p>
+                        <p className="date">{dateElm}</p>{" "}
+                      </div>
+                    </Link>
+                  </div>
+                );
+              }
+            )}
         </div>
       ) : (
         <div className="loadingSkeleton">

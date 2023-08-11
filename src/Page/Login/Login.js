@@ -2,11 +2,14 @@ import { useRef } from "react";
 import "./Login.css";
 import Show from "./Show.js";
 import { useEffect } from "react";
+import { Navigate } from "react";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const pswRef = useRef("");
   const rePswRef = useRef("");
   const textRef = useRef("");
   const emailRef = useRef("");
+  const navigate = useNavigate();
   useEffect(() => {
     textRef.current.focus();
   }, []);
@@ -18,9 +21,10 @@ const Login = () => {
       <form className="signUp" onSubmit={handleSubmit} id="form">
         <button
           className="close"
-          onClick={() =>
-            (document.getElementById("form").style.display = "none")
-          }
+          onClick={() => {
+            document.getElementById("form").style.display = "none";
+            navigate("/");
+          }}
         >
           X
         </button>
